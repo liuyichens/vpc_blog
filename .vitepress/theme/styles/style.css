@@ -4,6 +4,7 @@
 @import "vp-code.css";
 @import "vp-code-group.css";
 @import "custom-block.css";
+@import "animate.css";
 html {
   font-family: Arial, Helvetica;
 }
