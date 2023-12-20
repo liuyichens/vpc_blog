@@ -7,6 +7,8 @@ export default createContentLoader(`posts/**/*.md`, {
     return raw
       .map(({url, frontmatter, excerpt}) => ({
         title: frontmatter.title,
+        category: frontmatter.categories || [],
+        tags: frontmatter.categories || [],
         url,
         excerpt: markdownToTxt(excerpt.replace(/<[^>]+>/g, '').replace(/\s+/g,' ')),
         date: formatDate(frontmatter.date),

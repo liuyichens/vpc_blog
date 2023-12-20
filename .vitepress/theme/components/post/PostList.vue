@@ -1,10 +1,15 @@
 <script setup>
-import {data as posts} from '../../scripts/posts.data'
 import PostItem from './PostItem.vue'
+defineProps({
+  posts: {
+    type: Array,
+    default: () => []
+  }
+})
 </script>
 
 <template>
-  <div class="post-list bg-white">
+  <div class="post-list">
     <PostItem v-for="post in posts" :key="post.url" :title="post.title"
               :excerpt="post.excerpt" :url="post.url" :date="post.date"
               :image="post.image"/>

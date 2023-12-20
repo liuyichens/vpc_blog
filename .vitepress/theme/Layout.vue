@@ -4,6 +4,7 @@ import Header from "./components/header/Header.vue";
 import Main from "./components/main/Main.vue";
 import Footer from "./components/footer/Footer.vue";
 import Home from "./components/home/Home.vue";
+import PostDetail from "./components/post/PostDetail.vue";
 // https://vitepress.dev/reference/runtime-api#usedata
 const {site, frontmatter} = useData()
 </script>
@@ -15,10 +16,8 @@ const {site, frontmatter} = useData()
       <Home v-if="frontmatter.home">
 
       </Home>
-      <div v-else>
-        <a href="/">Home</a>
-        <Content/>
-      </div>
+      <PostDetail v-else>
+      </PostDetail>
     </Main>
     <Footer/>
   </div>

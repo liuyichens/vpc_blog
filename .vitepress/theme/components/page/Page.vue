@@ -3,14 +3,14 @@ import {computed, useAttrs, useSlots, defineOptions} from "vue";
 const slots = useSlots()
 const attrs = useAttrs()
 const config = {
-  wrapper: 'flex flex-col lg:grid lg:grid-cols-10 lg:gap-8',
-  left: 'lg:col-span-2',
+  wrapper: 'flex flex-col lg:grid lg:grid-cols-12 lg:gap-4',
+  left: 'lg:col-span-3',
   center: {
     narrow: 'lg:col-span-6',
-    base: 'lg:col-span-8',
-    full: 'lg:col-span-10'
+    base: 'lg:col-span-9',
+    full: 'lg:col-span-12'
   },
-  right: 'lg:col-span-2 order-first lg:order-last'
+  right: 'lg:col-span-3 hidden lg:block'
 }
 
 
