@@ -27,7 +27,7 @@ const showImgUrl = computed(() => {
 </script>
 
 <template>
-  <div class="relative flex gap-5 border-b p-3.5 duration-300">
+  <div class="relative flex gap-5 border-b p-3.5 duration-300  border-gray-200 dark:border-gray-700">
     <div class="post-left relative flex-1">
       <a :href="url" class="absolute top-0 left-0 w-full h-full overflow-hidden rounded">
         <img class="object-cover w-full h-full" :src="showImgUrl" alt="">

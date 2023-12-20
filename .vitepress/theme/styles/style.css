@@ -1,5 +1,6 @@
 @import "tailwind.css";
 @import "vars.css";
+@import "variable.css";
 @import "vp-doc.css";
 @import "vp-code.css";
 @import "vp-code-group.css";
@@ -11,8 +12,9 @@ html {
 
 :root {
   --header-height: 55px;
-  --ui-background: 255 255 255;
-  --ui-foreground: var(--color-gray-700)
+  --ui-background: #f0f2f5;
+  --ui-foreground: var(--color-gray-700);
+  --vp-nav-height: var(--header-height);
 }
 
 .dark {
@@ -21,5 +23,9 @@ html {
 }
 
 body{
-  background-color: #f7f7f8;
+  background-color:var(--ui-background);
+}
+
+.dark body {
+  background-color: rgb(15, 23, 42);
 }

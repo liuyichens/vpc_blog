@@ -20,7 +20,7 @@ const tags = computed(() => {
 
 <template>
   <Page class="my-8">
-    <div class="bg-white">
+    <div class="bg-white dark:bg-contentbg dark:text-white">
       <PostList :posts="posts"/>
     </div>
     <template #right>
