@@ -15,7 +15,7 @@ websites:
     title: Ele后台管理模板
     logo: https://eleadmin.com/assets/images/favicon.ico
     desc: EleAdmin后台管理模板
-  - link: https://picx.xpoet.cn/#/config
+  - link: https://picx.xpoet.cn/
     title: 图床配置
     logo: https://picx.xpoet.cn/logo.png
     desc: 图床配置 | PicX
@@ -23,11 +23,11 @@ websites:
     title: antfu.me
     logo: https://antfu.me/favicon.svg
     desc: Anthony Fu
-  - link: https://passport.xfyun.cn/login
+  - link: https://passport.xfyun.cn/
     title: 讯飞星火认知大模型
     logo: https://passport.xfyun.cn/static/favicon-xh.ico
     desc: 语音云，讯飞语音云，语音云开发者网站，讯飞开放平台
-  - link: https://yiyan.baidu.com/welcome
+  - link: https://yiyan.baidu.com/
     title: 文心一言
     logo: https://nlp-eb.cdn.bcebos.com/logo/favicon.ico
   - link: https://tongyi.aliyun.com/
