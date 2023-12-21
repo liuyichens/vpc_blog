@@ -23,7 +23,7 @@ websites:
     title: antfu.me
     logo: https://antfu.me/favicon.svg
     desc: Anthony Fu
-  - link: https://passport.xfyun.cn/
+  - link: https://xinghuo.xfyun.cn/
     title: 讯飞星火认知大模型
     logo: https://passport.xfyun.cn/static/favicon-xh.ico
     desc: 语音云，讯飞语音云，语音云开发者网站，讯飞开放平台
