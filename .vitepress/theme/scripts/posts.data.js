@@ -5,15 +5,29 @@ export default createContentLoader(`posts/**/*.md`, {
   excerpt: true,
   transform(raw) {
     return raw
-      .map(({url, frontmatter, excerpt}) => ({
+      .map(({url, frontmatter, excerpt}) => {
+        let desc = excerpt
+        if (excerpt.includes('<img')) {
+          desc = markdownToTxt(excerpt.replace(/<img\s[^>]*>/g, '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' '))
+        }
+        return {
+          title: frontmatter.title,
+          category: frontmatter.categories || [],
+          tags: frontmatter.categories || [],
+          url,
+          excerpt: desc,
+          date: formatDate(frontmatter.date),
+          image: extractImagesFromHTML(excerpt),
+        }
+      }/*({
         title: frontmatter.title,
         category: frontmatter.categories || [],
         tags: frontmatter.categories || [],
         url,
-        excerpt: markdownToTxt(excerpt.replace(/<[^>]+>/g, '').replace(/\s+/g,' ')),
+        excerpt: markdownToTxt(excerpt.replace(/<img\s[^>]*>/g, '')),
         date: formatDate(frontmatter.date),
         image: extractImagesFromHTML(excerpt),
-      }))
+      })*/)
       .sort((a, b) => b.date.time - a.date.time)
   }
 })

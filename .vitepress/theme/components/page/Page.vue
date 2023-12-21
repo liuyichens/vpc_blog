@@ -1,5 +1,5 @@
 <script setup>
-import {computed, useAttrs, useSlots, defineOptions} from "vue";
+import {computed, useAttrs, useSlots} from "vue";
 const slots = useSlots()
 const attrs = useAttrs()
 const config = {
