@@ -19,15 +19,7 @@ export default createContentLoader(`posts/**/*.md`, {
           date: formatDate(frontmatter.date),
           image: extractImagesFromHTML(excerpt),
         }
-      }/*({
-        title: frontmatter.title,
-        category: frontmatter.categories || [],
-        tags: frontmatter.categories || [],
-        url,
-        excerpt: markdownToTxt(excerpt.replace(/<img\s[^>]*>/g, '')),
-        date: formatDate(frontmatter.date),
-        image: extractImagesFromHTML(excerpt),
-      })*/)
+      })
       .sort((a, b) => b.date.time - a.date.time)
   }
 })
