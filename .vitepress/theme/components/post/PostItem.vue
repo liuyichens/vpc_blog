@@ -29,7 +29,10 @@ const imgUrls = [
     'https://picsum.photos/id/42/367/267',
     'https://picsum.photos/id/48/367/267',
     'https://picsum.photos/id/36/367/267',
-    'https://picsum.photos/id/39/367/267'
+    'https://picsum.photos/id/39/367/267',
+    'https://picsum.photos/id/119/367/267',
+    'https://picsum.photos/id/160/367/267',
+    'https://picsum.photos/id/201/367/267'
 ]
 
 const showImgUrl = computed(() => {
