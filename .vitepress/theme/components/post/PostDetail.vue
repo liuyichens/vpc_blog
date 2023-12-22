@@ -19,7 +19,7 @@ const {frontmatter, page} = useData()
       </div>
     </div>
     <template #right>
-      <nav class="sticky top-[--header-height] overflow-y-auto max-h-[calc(100vh-var(--header-height))]">
+      <nav class="sticky top-[--header-height]">
         <aside-box title="目录" class="slide-enter">
           <VPContentDoc class="content-outline"/>
         </aside-box>
