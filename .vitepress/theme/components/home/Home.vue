@@ -45,8 +45,8 @@ const activeName = computed(() => {
           </li>
         </ul>
       </div>
-      <PostList :posts="posts" v-if="activeName === '文章'"/>
-      <Tips v-if="activeName === 'Tips'"/>
+      <PostList :posts="posts" v-show="activeName === '文章'"/>
+      <Tips v-show="activeName === 'Tips'"/>
     </div>
     <template #right>
       <nav
