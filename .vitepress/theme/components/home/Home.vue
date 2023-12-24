@@ -33,7 +33,7 @@ const activeName = computed(() => {
 </script>
 
 <template>
-  <Page class="my-8">
+  <Page class="my-8 mt-1">
     <div class="bg-white dark:bg-contentbg dark:text-white rounded">
       <div
           class="home-header overflow-auto whitespace-nowrap text-xl p-5 border-b border-gray-200 dark:border-gray-700">

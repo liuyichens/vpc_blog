@@ -1,5 +1,8 @@
 import {defineConfig} from 'vitepress'
 import baseConfig from "./theme/config/baseConfig.js";
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -37,6 +40,16 @@ export default defineConfig({
   async transformPageData(pageData, ctx) {
     await processData(pageData, ctx);
   },
+  vite: {
+    plugins: [
+      AutoImport({
+        resolvers: [ElementPlusResolver()],
+      }),
+      Components({
+        resolvers: [ElementPlusResolver()],
+      }),
+    ]
+  }
 })
 
 export async function processData(
