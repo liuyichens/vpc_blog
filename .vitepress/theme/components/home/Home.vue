@@ -1,11 +1,11 @@
 <script setup>
-import {computed, ref} from 'vue'
+import { computed, ref } from 'vue'
 import PostList from "../post/PostList.vue";
 import Page from '../page/Page.vue'
 import Author from "../aside/Author.vue";
 import AsideBox from "../aside/AsideBox.vue";
 import Tips from "../tip/Tips.vue";
-import {data as posts} from '../../scripts/posts.data'
+import { data as posts } from '../../scripts/posts.data'
 
 const categories = computed(() => {
   const allCategory = posts.map(post => post.category).flat()
@@ -35,23 +35,20 @@ const activeName = computed(() => {
 <template>
   <Page class="my-8 mt-1">
     <div class="bg-white dark:bg-contentbg dark:text-white rounded">
-      <div
-          class="home-header overflow-auto whitespace-nowrap text-xl p-5 border-b border-gray-200 dark:border-gray-700">
+      <div class="home-header overflow-auto whitespace-nowrap text-xl p-5 border-b border-gray-200 dark:border-gray-700">
         <ul class="flex gap-2.5 text-[#18191a] dark:text-white">
           <li v-for="(title, index) in headerTitleList"
-              :class="['relative flex-shrink-0 cursor-pointer', {'active': activeTab === index}]"
-              @click="toggleTab(index)">
+            :class="['relative flex-shrink-0 cursor-pointer', { 'active': activeTab === index }]" @click="toggleTab(index)">
             {{ title }}
           </li>
         </ul>
       </div>
-      <PostList :posts="posts" v-show="activeName === '文章'"/>
-      <Tips v-show="activeName === 'Tips'"/>
+      <PostList :posts="posts" v-show="activeName === '文章'" />
+      <Tips v-show="activeName === 'Tips'" />
     </div>
     <template #right>
-      <nav
-          class="group -mx-4 sm:-mx-6 px-4 sm:px-6 lg:px-4 lg:-mx-4 space-y-3">
-        <Author class="slide-enter"/>
+      <nav class="group -mx-4 sm:-mx-6 px-4 sm:px-6 lg:px-4 lg:-mx-4 space-y-3">
+        <Author class="slide-enter" />
         <AsideBox title="分类" class="slide-enter">
           <ul>
             <li v-for="(c, index) in categories" :key="c" class="text-sm leading-tight">
@@ -71,6 +68,4 @@ const activeName = computed(() => {
   </Page>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

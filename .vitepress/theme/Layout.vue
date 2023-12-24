@@ -32,6 +32,7 @@ const locale = computed(() => (language.value === 'zh-cn' ? zhCn : en))
           <About v-else-if="frontmatter.about"/>
         </Main>
         <Footer/>
+        <el-backtop :right="100" :bottom="100" />
       </el-container>
     </el-scrollbar>
   </el-config-provider>
