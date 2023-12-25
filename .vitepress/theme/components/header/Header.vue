@@ -24,7 +24,7 @@ import VPNavBarAppearance from 'vitepress/dist/client/theme-default/components/V
 <style scoped>
 .app-header {
   @apply border-b border-gray-200 dark:border-gray-800 -mb-px sticky top-0 z-50;
-  background-image: radial-gradient(transparent, 1px, var(--body-background));
+  background-image: radial-gradient(transparent, 1px, var(--ui-card-background));
   background-size: 4px 4px;
   backdrop-filter: saturate(50%) blur(4px);
   -webkit-backdrop-filter: saturate(50%) blur(4px);

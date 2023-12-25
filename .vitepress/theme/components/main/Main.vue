@@ -11,6 +11,7 @@
 
 <style scoped>
 .app-main {
-  @apply bg-[var(--layout-body-background)]
+  @apply bg-[var(--layout-body-background)];
+  overflow: unset;
 }
 </style>

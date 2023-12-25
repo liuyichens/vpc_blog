@@ -1,6 +1,6 @@
 <script setup>
-import {useData} from 'vitepress'
-import {ref, computed} from "vue";
+import {useData, useRouter} from 'vitepress'
+import {ref, computed, onMounted} from "vue";
 import Header from "./components/header/Header.vue";
 import Main from "./components/main/Main.vue";
 import Footer from "./components/footer/Footer.vue";
@@ -17,11 +17,20 @@ import en from 'element-plus/dist/locale/en.mjs'
 const language = ref('zh-cn')
 const locale = computed(() => (language.value === 'zh-cn' ? zhCn : en))
 
+const scrollContainerRef = ref()
+
+const handleRouterChange = () => {
+  if (scrollContainerRef.value && scrollContainerRef.value.scrollTo) {
+    scrollContainerRef.value.scrollTo(0,0)
+  }
+}
+
+const router = useRouter()
+
 </script>
 
 <template>
   <el-config-provider :locale="locale">
-    <el-scrollbar class="h-screen">
       <el-container class="font-sans text-gray-700 dark:text-gray-200 relative" direction="vertical">
         <Header/>
         <Main>
@@ -32,8 +41,7 @@ const locale = computed(() => (language.value === 'zh-cn' ? zhCn : en))
           <About v-else-if="frontmatter.about"/>
         </Main>
         <Footer/>
-        <el-backtop :right="100" :bottom="100" />
+        <el-backtop :right="100" :bottom="100"/>
       </el-container>
-    </el-scrollbar>
   </el-config-provider>
 </template>

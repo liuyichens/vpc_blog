@@ -11,6 +11,9 @@ export default {
     for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
       app.component(key, component)
     }
+    if (navigator && navigator.userAgent && navigator.userAgent.match(/Win[a-z0-9]*;/)) {
+      document.documentElement.classList.add('ui-scrollbars')
+    }
   }
 }
 

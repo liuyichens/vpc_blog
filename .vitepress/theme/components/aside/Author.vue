@@ -6,7 +6,8 @@ import VPSocialLinks from 'vitepress/dist/client/theme-default/components/VPSoci
 </script>
 
 <template>
-  <div class="author-panel relative overflow-hidden text-center bg-white dark:bg-contentbg dark:text-white rounded-sm pb-5">
+  <div
+      class="author-panel relative overflow-hidden text-center pb-5 aside-style">
     <div class="author-back-image">
       <img class="max-w-full w-full h-auto max-h-[110px]" :src="withBase('/img/author_background_image.webp')" alt="">
     </div>

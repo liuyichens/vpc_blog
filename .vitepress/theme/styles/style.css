@@ -6,14 +6,29 @@
 @import "vp-code-group.css";
 @import "custom-block.css";
 @import "animate.css";
+@import "./scrollbars.css";
 html {
   font-family: Arial, Helvetica;
 }
 
 :root {
   --header-height: 55px;
+  --ui-background: 255 255 255;
+  --ui-foreground: 51 65 85;
+  --ui-card-background: #fff;
   --vp-nav-height: var(--header-height);
 }
+.dark {
+  --ui-background: 15 23 42;
+  --ui-foreground: 226 232 240;
+  --ui-card-background: #1c2335;
+  --body-background: rgb(var(--ui-background));
+}
 body{
-  background-color:var(--body-background);
+  background-color: rgb(var(--ui-background));
+}
+
+.aside-style {
+  @apply bg-white border border-gray-200 rounded
+  dark:bg-[var(--ui-card-background)] dark:border-gray-700 dark:text-white
 }

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="footer-wave w-full h-10 relative z-10 overflow-hidden">
+  <div class="footer-wave w-full h-10 relative z-10 overflow-hidden bg-[var(--layout-body-background)]">
     <svg class="editorial block w-full h-10 m-0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
          viewBox="0 24 150 28" preserveAspectRatio="none">
       <defs>

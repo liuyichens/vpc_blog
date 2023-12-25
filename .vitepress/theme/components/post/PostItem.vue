@@ -62,17 +62,17 @@ onBeforeUnmount(() => {
 <template>
   <div class="relative flex gap-5 border-b p-3.5 duration-300  border-gray-200 dark:border-gray-700">
     <div class="post-left relative flex-1">
-      <a :href="url" class="absolute top-0 left-0 w-full h-full overflow-hidden rounded">
+      <el-link :underline="false" :href="url" class="absolute top-0 left-0 w-full h-full overflow-hidden rounded">
         <img src="/img/img-loading.svg" class="object-cover w-full h-full" :data-lazy-src="showImgUrl" alt="" ref="imgRef">
-      </a>
+      </el-link>
     </div>
     <div class="flex flex-[2.5_2.5_0%] flex-col justify-between w-0 flex-shrink-0">
-      <h2 class="post-title font-medium text-[20px] box-border overflow-hidden">
-        <a :href="url">{{ title }}</a>
+      <h2 class="post-title box-border overflow-hidden">
+        <el-link :href="url" class="font-medium text-[20px] text-[var(--text-color)] hover:text-[var(--primary-color-hover)] transition-colors duration-300">{{ title }}</el-link>
       </h2>
-      <div class="post-excerpt" v-html="excerpt"></div>
+      <div class="post-excerpt text-[var(--text-color)]" v-html="excerpt"></div>
       <div class="post-meta flex text-sm justify-between">
-        <div>{{ date.string }}</div>
+        <div class="text-[var(--text-color-secondary)]">{{ date.string }}</div>
       </div>
     </div>
   </div>
@@ -87,6 +87,12 @@ onBeforeUnmount(() => {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+
+.post-title a {
+  @apply after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-0 after:border-b
+  after:border-b-transparent after:duration-300
+  hover:after:border-b-[var(--pairmary-color-hover)];
 }
 
 .post-excerpt {

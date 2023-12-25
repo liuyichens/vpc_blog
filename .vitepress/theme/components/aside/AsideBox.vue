@@ -5,7 +5,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="bg-white dark:bg-contentbg border border-gray-200 dark:border-gray-700 rounded p-2.5 overflow-hidden text-[#18191a] dark:text-white">
+  <div class="p-2.5 overflow-hidden text-[#18191a] aside-style">
     <h2 class="title">{{title}}</h2>
     <slot/>
   </div>
