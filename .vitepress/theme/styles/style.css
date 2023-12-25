@@ -17,12 +17,14 @@ html {
   --ui-foreground: 51 65 85;
   --ui-card-background: #fff;
   --vp-nav-height: var(--header-height);
+  --bg-img-color: rgba(50,0,0,0.05);
 }
 .dark {
   --ui-background: 15 23 42;
   --ui-foreground: 226 232 240;
   --ui-card-background: #1c2335;
   --body-background: rgb(var(--ui-background));
+  --bg-img-color: hsla(0,0%,49%,0.05);
 }
 body {
   background-color: rgb(var(--ui-background));

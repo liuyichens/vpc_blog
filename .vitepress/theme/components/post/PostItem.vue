@@ -66,7 +66,7 @@ onBeforeUnmount(() => {
     </div>
     <div class="flex flex-[2.5_2.5_0%] flex-col justify-between w-0 flex-shrink-0">
       <h2 class="post-title box-border overflow-hidden">
-        <el-link :href="url" class="font-medium text-[20px] text-[var(--text-color)] hover:text-[var(--primary-color-hover)] transition-colors duration-300">
+        <el-link :href="url" class="font-medium text-xl text-[var(--text-color)] hover:text-[var(--primary-color-hover)] transition-colors duration-300">
           {{ title }}
         </el-link>
       </h2>
