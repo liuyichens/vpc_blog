@@ -36,5 +36,6 @@ websites:
     desc: 通义，阿里云大模型的统一品牌，覆盖语言、听觉、多模态等领域，致力于实现类人智慧的通用智能。不仅有语言模型产品通义千问和文生图模型产品通义万相，也有基于通义大模型的通义听悟、通义灵码、通义星尘、通义晓蜜、通义点金、通义法睿、通义仁心、通义智文等系列产品及行业应用。
   - link: http://www.qianduan8.com/
     title: 前端吧 | 关注web前端开发为主的博客网站,前端网址大全
+    logo: http://www.qianduan8.com/favicon.ico
     desc: 前端吧(qianduan8.com)，是一个专注web前端开发技术内容为主的博客网站和前端网址导航，收集有一大批前端相关的技术资料网站，包括Vue.js、React、Node.js、CSS3、HTML5、JavaScript教程网站、热门JS框架、icon素材图库、交互设计、开发工具等网站，提供了便捷的资料入口。
 ---
