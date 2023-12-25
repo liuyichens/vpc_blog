@@ -2,7 +2,7 @@
 title: 收藏
 layout: page
 favor: true
-websites: 
+websites:
   - link: https://www.lovestu.com/
     title: 'CorePress'
     logo: https://www.lovestu.com/wp-content/uploads/2022/08/favicon.webp

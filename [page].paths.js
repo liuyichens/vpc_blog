@@ -3,10 +3,9 @@
 
 export default {
   paths() {
-
     return [
-      {params: {page: 1}},
-      {params: {page: 2}}
+      { params: { page: 1 } },
+      { params: { page: 2 } },
     ]
-  }
+  },
 }

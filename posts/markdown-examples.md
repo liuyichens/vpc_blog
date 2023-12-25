@@ -61,6 +61,7 @@ export default {
   }
 </style>
 <div class="container"></div>
+
 ```
 
 ## Custom Containers
@@ -87,6 +88,7 @@ This is a dangerous warning.
 ::: details
 This is a details block.
 :::
+
 ```
 
 **Output**

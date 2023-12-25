@@ -20,9 +20,9 @@ For the past 18 months since [Vue 2.7](https://blog.vuejs.org/posts/vue-2-7-naru
 
 As we approach this date, the Vue community should prepare for the deprecation of Vue 2. On December 31, we will mark the following packages as deprecated on npm:
 
-* All major and minor versions of Vue 2 core
-* [vue-router](https://www.npmjs.com/package/vue-router) versions exclusively supporting Vue 2 (3.x and below)
-* [vuex](https://www.npmjs.com/package/vuex) versions exclusively supporting Vue 2 (3.x and below)
+- All major and minor versions of Vue 2 core
+- [vue-router](https://www.npmjs.com/package/vue-router) versions exclusively supporting Vue 2 (3.x and below)
+- [vuex](https://www.npmjs.com/package/vuex) versions exclusively supporting Vue 2 (3.x and below)
 
 **After December 31, 2023, Vue 2 will no longer receive new features, updates, or fixes, though it will still be available on all existing distribution channels (CDNs, package managers, Github, etc).**
 
@@ -32,19 +32,18 @@ In other words, your applications will continue to work, but you will get deprec
 
 Vue 3 has been the default version of Vue since February 7, 2022. Users who have migrated have enjoyed:
 
-* Better performance with a smaller bundle size and faster rendering.
-* Enhanced TypeScript support for easier large-scale application development.
-* More efficient Proxy-based reactivity system.
-* New built-in components like Fragment, Teleport, and Suspense.
-* Improved build tooling support and Vue Devtools experience.
-* …and more!
+- Better performance with a smaller bundle size and faster rendering.
+- Enhanced TypeScript support for easier large-scale application development.
+- More efficient Proxy-based reactivity system.
+- New built-in components like Fragment, Teleport, and Suspense.
+- Improved build tooling support and Vue Devtools experience.
+- …and more!
 
 When and if you can, consider migrating!
 
 ## Still on Vue 2? Here Are Your Options.
 
 Recognizing the various situations that arise during transitions, we are also fully aware that users may need other options until they’re able to migrate, or maybe migration simply isn't a feasible path. Here are some other options to consider.
-
 
 ### Update to the Vue 2 Final Release
 
@@ -58,8 +57,7 @@ If you have to stay on Vue 2 post-EOL, we have partnered with HeroDevs to offer 
 
 Vue 2 NES is the continuation of the support you’ve enjoyed during the Vue 2 LTS period — but indefinitely. For more detailed information, visit the [HeroDevs Vue 2 NES page](https://www.herodevs.com/support/nes-vue?utm_source=vuejs-org&utm_medium=blog&utm_campaign=eol-by-eoy).
 
-
-### Notify Your Users of your Vue 2 Post-EOL Plan 
+### Notify Your Users of your Vue 2 Post-EOL Plan
 
 If you can’t migrate to Vue 3 or use Vue 2 NES at the moment but still remain on Vue 2, you may need to consider how you will communicate your Vue 2 security plans to your customers.
 

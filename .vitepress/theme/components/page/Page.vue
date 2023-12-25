@@ -1,5 +1,9 @@
 <script setup>
-import {computed, useAttrs, useSlots} from "vue";
+import { computed, useAttrs, useSlots } from 'vue'
+
+defineOptions({
+  inheritAttrs: false,
+})
 const slots = useSlots()
 const attrs = useAttrs()
 const config = {
@@ -8,25 +12,19 @@ const config = {
   center: {
     narrow: 'lg:col-span-6',
     base: 'lg:col-span-9',
-    full: 'lg:col-span-12'
+    full: 'lg:col-span-12',
   },
-  right: 'lg:col-span-3 hidden lg:block'
+  right: 'lg:col-span-3 hidden lg:block',
 }
 
-
-defineOptions({
-  inheritAttrs: false
-})
-
 const centerClass = computed(() => {
-  if (slots.left && slots.right) {
+  if (slots.left && slots.right)
     return config.center.narrow
-  } else if (slots.left || slots.right) {
+  else if (slots.left || slots.right)
     return config.center.base
-  }
+
   return config.center.full
 })
-
 </script>
 
 <template>

@@ -1,13 +1,15 @@
 <script setup>
 defineProps({
-  title: String
+  title: String,
 })
 </script>
 
 <template>
   <div class="p-2.5 overflow-hidden text-[#18191a] aside-style">
-    <h2 class="title">{{title}}</h2>
-    <slot/>
+    <h2 class="title">
+      {{ title }}
+    </h2>
+    <slot />
   </div>
 </template>
 

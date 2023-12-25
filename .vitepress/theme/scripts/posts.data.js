@@ -1,15 +1,15 @@
-import {createContentLoader} from 'vitepress'
-import {markdownToTxt} from 'markdown-to-txt';
+import { createContentLoader } from 'vitepress'
+import { markdownToTxt } from 'markdown-to-txt'
 
 export default createContentLoader(`posts/**/*.md`, {
   excerpt: true,
   transform(raw) {
     return raw
-      .map(({url, frontmatter, excerpt}) => {
+      .map(({ url, frontmatter, excerpt }) => {
         let desc = excerpt
-        if (excerpt.includes('<img')) {
+        if (excerpt.includes('<img'))
           desc = markdownToTxt(excerpt.replace(/<img\s[^>]*>/g, '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' '))
-        }
+
         return {
           title: frontmatter.title,
           category: frontmatter.categories || [],
@@ -21,17 +21,17 @@ export default createContentLoader(`posts/**/*.md`, {
         }
       })
       .sort((a, b) => b.date.time - a.date.time)
-  }
+  },
 })
 
 function extractImagesFromHTML(html) {
   const srcs = []
-  if (!html) return ''
+  if (!html)
+    return ''
   if (html.includes('<img')) {
     const imgs = html.match(/<img[^>]+src="([^"]+)/ig)
-    if (imgs) {
+    if (imgs)
       srcs.push(...imgs.map(img => img.match(/<img[^>]+src="([^"]+)/)[1]))
-    }
   }
   return srcs.length > 0 ? srcs[0] : ''
   // const parser = new DOMParser();
@@ -52,7 +52,7 @@ function formatDate(raw) {
     string: date.toLocaleDateString('zh-CN', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric'
-    })
+      day: 'numeric',
+    }),
   }
 }

@@ -1,17 +1,39 @@
 {
   "name": "vp_core",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "preview": "vitepress preview"
+    "preview": "vitepress preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "element-plus": "^2.4.4",
+    "vanilla-lazyload": "^17.8.5"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.4.6",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-plugin-format": "^0.1.0",
+    "lodash": "^4.17.21",
+    "markdown-to-txt": "^2.0.1",
+    "postcss": "^8.4.32",
+    "postcss-nesting": "^12.0.2",
+    "tailwindcss": "^3.3.7",
+    "unplugin-auto-import": "^0.17.2",
+    "unplugin-vue-components": "^0.26.0",
+    "vitepress": "1.0.0-rc.32",
+    "vue": "^3.3.12"
+  },
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
@@ -19,21 +41,5 @@
         "search-insights"
       ]
     }
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.16",
-    "lodash": "^4.17.21",
-    "markdown-to-txt": "^2.0.1",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.3.7",
-    "unplugin-auto-import": "^0.17.2",
-    "unplugin-vue-components": "^0.26.0",
-    "vitepress": "1.0.0-rc.32",
-    "vue": "^3.3.12"
-  },
-  "dependencies": {
-    "@element-plus/icons-vue": "^2.3.1",
-    "element-plus": "^2.4.4",
-    "vanilla-lazyload": "^17.8.5"
   }
 }

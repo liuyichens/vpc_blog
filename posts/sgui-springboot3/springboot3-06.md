@@ -12,28 +12,30 @@ tags:
   - SpringBoot 配置文件
 ---
 
- 这是 SpringBoot3 第六篇视频笔记，这里记录了Spring Boot中的配置文件格式
+这是 SpringBoot3 第六篇视频笔记，这里记录了Spring Boot中的配置文件格式
 
 ---
 
 ## yml格式配置文件
 
-
 ### 基本语法
- - yml文件是以`key: value`形式书写，使用**缩进**表示层级关系
- - **缩进**时不允许使用`Tab`键进行缩进，只能使用**空格**
- - 不论缩进多少空格，只要和相同层级的元素左对齐即可
- - yml文件中大小写敏感
- - 使用`#`注释
+
+- yml文件是以`key: value`形式书写，使用**缩进**表示层级关系
+- **缩进**时不允许使用`Tab`键进行缩进，只能使用**空格**
+- 不论缩进多少空格，只要和相同层级的元素左对齐即可
+- yml文件中大小写敏感
+- 使用`#`注释
 
 ### yml支持方式
- - 支持对象: 键值对的集合
- - 支持数组
- - 单独的属性，例如字符串，数字，布尔值，日期等
+
+- 支持对象: 键值对的集合
+- 支持数组
+- 单独的属性，例如字符串，数字，布尔值，日期等
 
 ### SpringBoot中配置yml格式的配置文件
 
 ::: code-group
+
 ```java[Person.java]
 @Component
 @ConfigurationProperties(prefix = "person")
@@ -48,6 +50,7 @@ public class Person {
     private Map<String, Cat> cats;
 }
 ```
+
 ```java[Child.java]
 @Data
 public class Child {
@@ -57,6 +60,7 @@ public class Child {
     private List<String> text;
 }
 ```
+
 ```java[Dog.java]
 @Data
 public class Dog {
@@ -64,6 +68,7 @@ public class Dog {
     private Integer age;
 }
 ```
+
 ```java[Cat.java]
 @Data
 public class Cat {
@@ -71,9 +76,11 @@ public class Cat {
     private Integer age;
 }
 ```
+
 :::
 
 ### yml配置
+
 ```yml[application.yml]
 person:
   # 简单数据类型表示
@@ -108,6 +115,7 @@ person:
 
 ::: tip 提示
 在yml文件中对于以下几种类型的说明
+
 - 文本
   - **单引号**中的文本不会被转义
   - 但是**双引号**中的文本会被转义
@@ -116,7 +124,7 @@ person:
   - `>`开头大文本写在下一层，文本中的原本格式会被忽略，全部写成一行
 - 多文档合并
   - 使用`---`可以将多个`yml`文档合并在一个文档中，但是每一个文档区域已让是内容独立的
-:::
+    :::
 
 > 大文本演示
 
@@ -125,18 +133,18 @@ person:
 text:
   - 'abc \n'
   - "def \n"
-  - | 
+  - |
     我是大文本
     我是小妖怪
     逍遥又自在
-  - > 
+  - >
     我是大文本
     我想要换行
     但是不让换
 ```
 
 ```bash
-Person(..., text=[abc \n, def 
+Person(..., text=[abc \n, def
 , 我是大文本
 我是小妖怪
 逍遥又自在

@@ -80,7 +80,9 @@ function increment() {
 </script>
 
 <template>
-  <button @click="increment">{{ count }}</button>
+  <button @click="increment">
+    {{ count }}
+  </button>
 </template>
 ```
 

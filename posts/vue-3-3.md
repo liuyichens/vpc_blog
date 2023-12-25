@@ -148,7 +148,9 @@ watchEffect(() => {
 })
 </script>
 
-<template>{{ msg }}</template>
+<template>
+  {{ msg }}
+</template>
 ```
 
 This feature is experimental and requires explicit opt-in.
@@ -172,7 +174,7 @@ function onInput(e) {
 </script>
 
 <template>
-  <input :value="modelValue" @input="onInput" />
+  <input :value="modelValue" @input="onInput">
 </template>
 ```
 
@@ -186,7 +188,7 @@ console.log(modelValue.value)
 </script>
 
 <template>
-  <input v-model="modelValue" />
+  <input v-model="modelValue">
 </template>
 ```
 
